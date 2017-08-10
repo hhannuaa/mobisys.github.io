@@ -21,18 +21,17 @@ permalink: /contact/
 <section id="contact-form">
   <div class="container">
     <div class="row">
-    <form method="POST" action="http://formspree.io/safebox.aidos@gmail.com">
+    <form name="gform" id="gform" enctype="text/plain" action="https://docs.google.com/forms/d/e/1FAIpQLSd81Lyrj87aDEm7Hkc0kVQS9UIDR7PBsClHg4qZcEGjfmxRZw/formResponse?" target="hidden_iframe" onsubmit="submitted=true;">
       <div class="col-md-6 col-sm-12">
         <div class="block">
-          
             <div class="form-group">
-              <input type="text" class="form-control" placeholder="Your Name" name="name">
+              <input type="text" class="form-control" placeholder="Your Name" name="entry.2005620554" id="entry.2005620554">
             </div>
             <div class="form-group">
-              <input type="text" class="form-control" placeholder="Email Address" name="_replyto">
+              <input type="text" class="form-control" placeholder="Email Address" name="entry.1045781291" id="entry.1045781291">
             </div>
             <div class="form-group">
-              <input type="text" class="form-control" placeholder="Subject">
+              <input type="text" class="form-control" placeholder="Subject" name="entry.1065046570" id="entry.1065046570">
             </div>
           
         </div>
@@ -41,15 +40,24 @@ permalink: /contact/
         <div class="block">
 
             <div class="form-group-2">
-              <textarea class="form-control" rows="3" placeholder="Your Message" name="message"></textarea>
+              <textarea class="form-control" rows="3" placeholder="Your Message" name="entry.839337160" id="entry.839337160"></textarea>
             </div>
-            <button class="btn btn-default" type="submit">Send Message</button>
+            <button class="btn btn-default" type="submit" value="Submit">Send Message</button>
           
         </div>
       </div>
       
     </div>
     </form>
+    <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {}"></iframe>
+    <script src="assets/js/jquery.min.js"></script>
+<script type="text/javascript">var submitted=false;</script>
+<script type="text/javascript">
+$('#gform').on('submit', function(e) {
+  $('#gform *').fadeOut(2000);
+  $('#gform').prepend('Your submission has been processed...');
+  });
+</script>
     <div id="contact-box" class="row">
       <div class="col-md-6 col-sm-12">
         <div class="block">
